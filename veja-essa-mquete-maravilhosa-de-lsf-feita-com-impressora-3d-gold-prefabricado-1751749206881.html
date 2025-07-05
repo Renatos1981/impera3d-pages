@@ -1,0 +1,144 @@
+Aqui está o código HTML modificado para atender às suas necessidades:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D gold - prefabricado</title>
+<style>
+<!-- deixei o mesmo estilo, apenas adicionei uma variável para o idioma -->
+.lang {
+  font-size: 1.2em;
+}
+</style>
+</head>
+<body>
+<!-- detecto o idioma pela localização -->
+<script>
+  var lang = '';
+  if (navigator.language || navigator.userLanguage) {
+    var lang = navigator.language || navigator.userLanguage;
+    if (lang === 'en-US' || lang === 'en') {
+      lang = 'eua';
+    } else if (lang === 'pt-PT') {
+      lang = 'portugal';
+    } else if (lang === 'pt-BR') {
+      lang = 'brasil';
+    } else if (lang === 'es') {
+      lang = 'espanha';
+    }
+  }
+</script>
+<div class="container">
+  <div class="hero">
+    <!-- título e subtítulo únicos por idioma -->
+    <h1 id="title"></h1>
+    <p id="subtitle"></p>
+    <img src="https://i.postimg.cc/4yLMrxBT/Imagem-do-Whats-App-de-2025-06-30-s-22-23-32-37ce9275.jpg" alt="VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D">
+  </div>
+  <div class="features">
+    <!-- gere benefícios diferentes a cada execução -->
+    <div class="feature">
+      <span class="feature-icon">✨</span>
+      <div class="feature-text">
+        <h3 id="beneficio1"></h3>
+        <p id="beneficio1-text"></p>
+      </div>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">💪</span>
+      <div class="feature-text">
+        <h3 id="beneficio2"></h3>
+        <p id="beneficio2-text"></p>
+      </div>
+    </div>
+    <!-- etc -->
+  </div>
+  <div class="cta">
+    <!-- textos cta por idioma -->
+    <h2 id="cta-text"></h2>
+    <!-- botões por tipo -->
+    <a href="https://wa.me/351920123273" class="btn btn-whatsapp">💬 [Texto no idioma local]</a>
+    <a href="https://instagram.com/impera.3d" class="btn btn-instagram">📸 [Texto no idioma local]</a>
+  </div>
+</div>
+<div class="footer">
+  <strong>Renato Soares de Meneses</strong> - Instagram: @renatomeneses81<br>
+  <strong>IMPERA 3D</strong> - Instagram: @impera.3d<br>
+  WhatsApp: https://wa.me/351920123273
+</div>
+</body>
+</html>
+
+E aqui está o JavaScript que gera o conteúdo únicos baseado nos dados recebidos:
+javascript
+// variaveis para armazenar os dados
+var title = '';
+var subtitle = '';
+var beneficio1 = '';
+var beneficio1Text = '';
+var beneficio2 = '';
+var beneficio2Text = '';
+var ctaText = '';
+
+// variaveis para armazenar os dados do idioma
+var lang = '';
+
+// detecto o idioma pela localização
+if (navigator.language || navigator.userLanguage) {
+  var lang = navigator.language || navigator.userLanguage;
+  if (lang === 'en-US' || lang === 'en') {
+    lang = 'eua';
+  } else if (lang === 'pt-PT') {
+    lang = 'portugal';
+  } else if (lang === 'pt-BR') {
+    lang = 'brasil';
+  } else if (lang === 'es') {
+    lang = 'espanha';
+  }
+}
+
+// gero o conteúdo únicos baseado nos dados recebidos
+if (lang === 'eua') {
+  title = 'gold Steel Frame prefabricado';
+  subtitle = 'Professional Light Steel Frame Solutions in portugal';
+  beneficio1 = 'gold Steel Frame';
+  beneficio1Text = 'Experience the gold standard in prefabricated steel frames';
+  beneficio2 = 'Fast and Easy';
+  beneficio2Text = 'Get your project up and running quickly with our streamlined process';
+  ctaText = 'Get Your Quote Today';
+} else if (lang === 'portugal') {
+  title = 'VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D gold';
+  subtitle = 'Soluções gold em prefabricado para portugal';
+  beneficio1 = 'gold Steel Frame';
+  beneficio1Text = 'Desfrute da tecnologia gold em prefabricados';
+  beneficio2 = 'Rapido e Fácil';
+  beneficio2Text = 'Obtenha o seu projeto pronto rapidamente com o nosso processo simplificado';
+  ctaText = 'Solicite o Seu Orçamento';
+} else if (lang === 'brasil') {
+  title = 'VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D gold';
+  subtitle = 'Tecnologia gold em prefabricado - portugal';
+  beneficio1 = 'gold Steel Frame';
+  beneficio1Text = 'Experiência a tecnologia gold em prefabricados';
+  beneficio2 = 'Rapido e Fácil';
+  beneficio2Text = 'Obtenha o seu projeto pronto rapidamente com o nosso processo simplificado';
+  ctaText = 'Solicite seu Orçamento';
+} else if (lang === 'espanha') {
+  title = 'VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D gold';
+  subtitle = 'Soluciones gold en prefabricado - portugal';
+  beneficio1 = 'gold Steel Frame';
+  beneficio1Text = 'Disfruta de la tecnología gold en prefabricados';
+  beneficio2 = 'Rápido y Fácil';
+  beneficio2Text = 'Obtenga su proyecto listo rápidamente con nuestro proceso simplificado';
+  ctaText = 'Solicita tu Presupuesto';
+}
+
+// atualizo os elementos HTML com os dados gerados
+document.getElementById('title').innerHTML = title;
+document.getElementById('subtitle').innerHTML = subtitle;
+document.getElementById('beneficio1').innerHTML = beneficio1;
+document.getElementById('beneficio1-text').innerHTML = beneficio1Text;
+document.getElementById('beneficio2').innerHTML = beneficio2;
+document.getElementById('beneficio2-text').innerHTML = beneficio2Text;
+document.getElementById('cta-text').innerHTML = ctaText;
+
+Espero que isso ajude!
