@@ -1,0 +1,109 @@
+O código HTML e JavaScript fornecido parece ser um modelo de página de vendas para um curso chamado "Curso Steel Frame Completo". Aqui estão algumas observações e sugestões sobre o código:
+
+1. **Estrutura HTML**: A estrutura HTML é bem organizada, com uma hierarquia clara de elementos. No entanto, é recomendável usar um arquivo CSS separado para estilos em vez de incluir estilos inline nos elementos HTML.
+
+2. **Script JavaScript**: O script JavaScript é usado para dinamicamente adicionar botões à página com base no tipo de produto. Isso é uma boa prática, pois permite personalizar a página com base nas necessidades do produto.
+
+3. **Segurança**: O código não parece ter vulnerabilidades de segurança óbvias, como injeção de SQL ou cross-site scripting (XSS). No entanto, é importante garantir que os dados inseridos sejam validados e sanitizados para evitar problemas de segurança.
+
+4. **Acessibilidade**: A página parece ser acessível, com uma estrutura de cabeçalho e rodapé clara e uma navegação simples. No entanto, é recomendável adicionar atributos ARIA para melhorar a acessibilidade para usuários com deficiência.
+
+5. **Responsividade**: A página parece ser responsiva, com estilos que se adaptam a diferentes tamanhos de tela. No entanto, é recomendável testar a página em diferentes dispositivos e tamanhos de tela para garantir que ela seja completamente responsiva.
+
+6. **Link de compra**: O link de compra é gerado dinamicamente com base no tipo de produto. Isso é uma boa prática, pois permite personalizar o link de compra com base nas necessidades do produto.
+
+7. **Rodapé**: O rodapé contém informações de contato e redes sociais. Isso é uma boa prática, pois permite que os usuários entrem em contato com a empresa ou sigam suas redes sociais.
+
+Aqui está uma versão refatorada do código com algumas sugestões de melhoria:
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Steel Frame Completo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Curso Steel Frame Completo</h1>
+        <p>economico • espanha</p>
+    </header>
+    <img src="https://i.postimg.cc/P5VxrbgF/A-estrutura-do-seu-sonho-na-palma-de-sua-m-o.jpg" alt="Imagem do curso">
+    <div class="conteudo">
+        <h2>Curso Steel Frame Completo</h2>
+        <p>Especializado em metalico para espanha.</p>
+    </div>
+    <div id="botoes"></div>
+    <footer>
+        <h3>IMPERA 3D - RENATO SOARES DE MENESES</h3>
+        <p>espanha | @impera.3d</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+css
+/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+.conteudo {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#botoes {
+    text-align: center;
+    margin: 40px 0;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+javascript
+// script.js
+const tipo = "digital";
+const whatsapp = "5511999999999";
+const linkProduto = "https://go.hotmart.com/B100539265A?dp=1";
+const nome = "Curso Steel Frame Completo";
+
+if (tipo === "digital") {
+    document.getElementById("botoes").innerHTML = `<a href="${linkProduto}" style="background: #007bff; color: white; padding: 20px 40px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 18px;">Comprar Agora</a>`;
+} else if (tipo === "maquete") {
+    document.getElementById("botoes").innerHTML = `
+        <a href="https://wa.me/${whatsapp}?text=Quero orçamento: ${nome}" style="background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; margin: 10px; display: inline-block; font-weight: bold;">Orçamento</a>
+        <a href="https://instagram.com/impera.3d" style="background: #E4405F; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; margin: 10px; display: inline-block; font-weight: bold;">Portfólio</a>
+    `;
+} else {
+    document.getElementById("botoes").innerHTML = `<a href="https://wa.me/${whatsapp}" style="background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold;">WhatsApp</a>`;
+}
