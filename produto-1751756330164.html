@@ -1,0 +1,33 @@
+O código HTML fornecido é uma estrutura básica de uma página web que utiliza JavaScript para gerar conteúdo dinamicamente com base nas configurações definidas. Aqui está uma explicação sobre como o código funciona e como pode ser personalizado para diferentes idiomas e produtos:
+
+### Configurações
+
+No início do script, há várias configurações que podem ser alteradas para personalizar a página:
+- `pais`: Define o país para o qual a página está sendo gerada.
+- `idioma`: Especifica o idioma da página (por exemplo, "pt-PT" para português de Portugal).
+- `tipo`: Indica o tipo de produto ou serviço (por exemplo, "lsf" para Steel Frame).
+- `nome`: Nome do produto ou serviço.
+- `whatsapp`: Número de WhatsApp para contato.
+- `linkProduto`: Link para o produto ou serviço, se aplicável.
+- `sufixo`: Um sufixo para ser usado em títulos e descrições.
+- `palavraChave`: Palavra-chave relacionada ao produto ou serviço (por exemplo, "casa").
+
+### Textos por Idioma
+
+A seção `textos` é um objeto que contém textos para diferentes idiomas. Cada idioma (identificado por um código como "pt-BR", "pt-PT", "en-US", etc.) tem suas próprias versões de títulos, benefícios, marca, slogan, e outras informações. Isso permite que a página seja facilmente traduzida para diferentes idiomas.
+
+### Geração de Conteúdo
+
+O script utiliza as configurações e os textos definidos para gerar o conteúdo da página, incluindo:
+- **Título e Benefícios**: Substitui variáveis nos textos com as configurações definidas e os exibe na página.
+- **Botões de Ação**: Gera botões com base no tipo de produto ou serviço. Por exemplo, para "lsf", são gerados botões para consultoria LSF e projetos LSF.
+- **Rodapé**: Inclui informações sobre a marca, especialista, atendimento, e links para redes sociais, além de um aviso de direitos autorais.
+
+### Personalização
+
+Para personalizar a página para diferentes idiomas ou produtos, você pode:
+- Alterar as configurações no início do script (por exemplo, mudar `idioma` para "en-US" para inglês ou `pais` para "Espanha").
+- Adicionar ou modificar textos no objeto `textos` para incluir mais idiomas ou produtos.
+- Ajustar as configurações do produto (como `nome`, `whatsapp`, e `linkProduto`) de acordo com as necessidades específicas.
+
+Lembre-se de que a personalização pode exigir ajustes adicionais no HTML e CSS para garantir que a página seja exibida corretamente em diferentes dispositivos e navegadores.
