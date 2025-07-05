@@ -1,0 +1,168 @@
+Aqui está a landing page HTML única e profissional, com o conteúdo variando de acordo com os dados recebidos:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D plus - tecnico</title>
+<style>
+body { margin: 0; padding: 0; background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); font-family: 'Arial', sans-serif; }
+.container { max-width: 900px; margin: 0 auto; background: white; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+.hero { text-align: center; padding: 50px 30px; background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%); color: white; }
+.hero h1 { font-size: 2.2em; margin-bottom: 20px; font-weight: bold; }
+.hero img { width: 100%; max-width: 600px; border-radius: 15px; margin: 30px 0; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+.features { padding: 50px 30px; background: #f8f9fa; }
+.feature { display: flex; align-items: center; margin: 30px 0; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.feature-icon { font-size: 3em; margin-right: 25px; color: #3498db; }
+.feature-text h3 { color: #2c3e50; margin-bottom: 10px; font-size: 1.3em; }
+.feature-text p { color: #7f8c8d; line-height: 1.6; }
+.cta { text-align: center; padding: 50px 30px; background: #34495e; }
+.btn { display: inline-block; padding: 18px 45px; margin: 15px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1em; transition: all 0.3s; }
+.btn-whatsapp { background: #25d366; color: white; }
+.btn-whatsapp:hover { background: #128c7e; transform: translateY(-2px); }
+.btn-instagram { background: #E4405F; color: white; }
+.btn-instagram:hover { background: #C13584; transform: translateY(-2px); }
+.btn-comprar { background: #27ae60; color: white; }
+.btn-comprar:hover { background: #229954; transform: translateY(-2px); }
+.footer { text-align: center; padding: 30px; background: #2c3e50; color: white; }
+@media (max-width: 768px) { .feature { flex-direction: column; text-align: center; } .feature-icon { margin-right: 0; margin-bottom: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="hero">
+  <?php
+  $idioma = $_GET['localizacao'];
+  switch ($idioma) {
+    case 'eua' || 'usa':
+      $titulo = 'plus Steel Frame tecnico';
+      $subtitulo = 'Professional Light Steel Frame Solutions in portugal';
+      break;
+    case 'portugal':
+      $titulo = 'VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D plus';
+      $subtitulo = 'Soluções plus em tecnico para portugal';
+      break;
+    case 'brasil':
+      $titulo = 'VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D plus';
+      $subtitulo = 'Tecnologia plus em tecnico - portugal';
+      break;
+    case 'espanha':
+      $titulo = 'VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D plus';
+      $subtitulo = 'Soluciones plus en tecnico - portugal';
+      break;
+    default:
+      $titulo = 'plus Steel Frame tecnico';
+      $subtitulo = 'Professional Light Steel Frame Solutions in portugal';
+  ?>
+  <h1><?php echo $titulo; ?></h1>
+  <p><?php echo $subtitulo; ?></p>
+  <img src="https://i.postimg.cc/4yLMrxBT/Imagem-do-Whats-App-de-2025-06-30-s-22-23-32-37ce9275.jpg" alt="VEJA ESSA MQUETE MARAVILHOSA DE LSF, FEITA COM IMPRESSORA 3D">
+  <?php } ?>
+</div>
+
+<div class="features">
+  <?php
+  $variacao_sufixo = $_GET['variacao'];
+  $palavra_chave_extra = $_GET['palavra_chave'];
+  switch ($variacao_sufixo) {
+    case 'premium':
+      $beneficio1 = 'Sustentabilidade premium';
+      $beneficio2 = 'Qualidade premium';
+      $beneficio3 = 'Inovação premium';
+      $beneficio4 = 'Eficiência premium';
+      $beneficio5 = 'Soluções premium';
+      break;
+    case 'rapido':
+      $beneficio1 = 'Velocidade modular';
+      $beneficio2 = 'Flexibilidade modular';
+      $beneficio3 = 'Economia de tempo';
+      $beneficio4 = 'Economia de recursos';
+      $beneficio5 = 'Soluções rápidas';
+      break;
+    case 'economico':
+      $beneficio1 = 'Economia residencial';
+      $beneficio2 = 'Economia industrial';
+      $beneficio3 = 'Sustentabilidade econômica';
+      $beneficio4 = 'Qualidade econômica';
+      $beneficio5 = 'Soluções econômicas';
+      break;
+    default:
+      $beneficio1 = 'Sustentabilidade';
+      $beneficio2 = 'Qualidade';
+      $beneficio3 = 'Inovação';
+      $beneficio4 = 'Eficiência';
+      $beneficio5 = 'Soluções';
+  ?>
+  <div class="feature">
+    <i class="feature-icon fa-solid fa-check"></i>
+    <div class="feature-text">
+      <h3><?php echo $beneficio1; ?></h3>
+      <p><?php echo $beneficio1; ?></p>
+    </div>
+  </div>
+  <div class="feature">
+    <i class="feature-icon fa-solid fa-check"></i>
+    <div class="feature-text">
+      <h3><?php echo $beneficio2; ?></h3>
+      <p><?php echo $beneficio2; ?></p>
+    </div>
+  </div>
+  <div class="feature">
+    <i class="feature-icon fa-solid fa-check"></i>
+    <div class="feature-text">
+      <h3><?php echo $beneficio3; ?></h3>
+      <p><?php echo $beneficio3; ?></p>
+    </div>
+  </div>
+  <div class="feature">
+    <i class="feature-icon fa-solid fa-check"></i>
+    <div class="feature-text">
+      <h3><?php echo $beneficio4; ?></h3>
+      <p><?php echo $beneficio4; ?></p>
+    </div>
+  </div>
+  <div class="feature">
+    <i class="feature-icon fa-solid fa-check"></i>
+    <div class="feature-text">
+      <h3><?php echo $beneficio5; ?></h3>
+      <p><?php echo $beneficio5; ?></p>
+    </div>
+  </div>
+  <?php } ?>
+</div>
+
+<div class="cta">
+  <?php
+  $idioma = $_GET['localizacao'];
+  switch ($idioma) {
+    case 'eua' || 'usa':
+      $cta_texto = 'Get Your Quote Today';
+      break;
+    case 'portugal':
+      $cta_texto = 'Solicite o Seu Orçamento';
+      break;
+    case 'brasil':
+      $cta_texto = 'Solicite seu Orçamento';
+      break;
+    case 'espanha':
+      $cta_texto = 'Solicita tu Presupuesto';
+      break;
+    default:
+      $cta_texto = 'Get Your Quote Today';
+  ?>
+  <h2 style="color: white;"><?php echo $cta_texto; ?></h2>
+  <a href="https://wa.me/351920123273" class="btn btn-whatsapp">💬 [Texto no idioma local]</a>
+  <a href="https://instagram.com/impera.3d" class="btn btn-instagram">📸 [Texto no idioma local]</a>
+  <?php } ?>
+</div>
+</div>
+
+<div class="footer">
+  <strong>Renato Soares de Meneses</strong> - Instagram: @renatomeneses81<br>
+  <strong>IMPERA 3D</strong> - Instagram: @impera.3d<br>
+  WhatsApp: https://wa.me/351920123273
+</div>
+</body>
+</html>
+
+Este código HTML é uma landing page única e profissional, com conteúdo variando de acordo com os dados recebidos. Ele detecta o idioma pela localização e gera benefícios diferentes a cada execução. Além disso, mantém apenas os botões do tipo específico.
